@@ -36,6 +36,7 @@
             <div id="third-row">
                 <label for="metOption">How did we meet?</label>
                 <select name="metOption" id="metOption">
+                    <option value="none">Please select</option>
                     <option value="Linkedin">Linkedin</option>
                     <option value="Conference">Conference</option>
                     <option value="Referral">Referral</option>
@@ -45,6 +46,31 @@
                 <label for="otherMetOption">Other (please specify) </label>
                 <input type="text" id="otherMetOption">
             </div>
+            <div id="fourth-row">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <div id="fifth-row">
+                <label for="mailingList">
+                    <input type="checkbox" id="mailingList">
+                    Please add me to your mailing list
+                </label>
+            </div>
+            <div id="sixth-row">
+                <label for="emailFormat">Choose an email format</label>
+
+                <label for="format">
+                    <input type="radio" name="format" id="HTML">
+                    HTML
+                </label>
+
+                <label for="format">
+                    <input type="radio" name="format" id="Text">
+                    Text
+                </label>
+            </div>
+
+            <button type="submit" id="submit-button">Submit</button>
         </form>
     </div>
 </body>
