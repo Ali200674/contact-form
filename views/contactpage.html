@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="/imgs/form.png">
 </head>
 
 <body>
@@ -13,50 +15,72 @@
             <h1>Contact Form</h1>
         </div>
         <form action="#" id="form" method="GET">
-            <div id="first-row">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname">
+            <div id="first-row" class="row">
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname">
+                </div>
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname">
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname">
+                </div>
 
-                <label for="jtitle">Job Title</label>
-                <input type="text" id="jtitle">
+                <div>
+                    <label for="jtitle">Job Title</label>
+                    <input type="text" id="jtitle">
+                </div>
+
+
             </div>
-            <div id="second-row">
-                <label for="company">Company</label>
-                <input type="text" id="company">
+            <div id="second-row" class="row">
+                <div>
+                    <label for="company">Company</label>
+                    <input type="text" id="company">
+                </div>
 
-                <label for="linkedinURL">Linkedin URL</label>
-                <input type="text" id="linkedinURL">
+                <div>
+                    <label for="linkedinURL">Linkedin URL</label>
+                    <input type="url" id="linkedinURL">
+                </div>
 
-                <label for="email">Email Address</label>
-                <input type="text" id="email">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email">
+                </div>
             </div>
-            <div id="third-row">
-                <label for="metOption">How did we meet?</label>
-                <select name="metOption" id="metOption">
-                    <option value="none">Please select</option>
-                    <option value="Linkedin">Linkedin</option>
-                    <option value="Conference">Conference</option>
-                    <option value="Referral">Referral</option>
-                    <option value="other">Other</option>
-                </select>
+            <div id="third-row" class="row">
+                <div>
+                    <label for="metOption">How did we meet?</label>
+                    <select name="metOption" id="metOption">
+                        <option value="none">Please select</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Referral">Referral</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-                <label for="otherMetOption">Other (please specify) </label>
-                <input type="text" id="otherMetOption">
+                <div>
+                    <label for="otherMetOption">Other (please specify) </label>
+                    <input type="text" id="otherMetOption">
+                </div>
+
+
+
             </div>
-            <div id="fourth-row">
+            <div id="fourth-row" class="row">
                 <label for="message">Message</label>
                 <textarea name="message" id="message"></textarea>
             </div>
-            <div id="fifth-row">
+
+            <div id="fifth-row" class="row">
                 <label for="mailingList">
                     <input type="checkbox" id="mailingList">
                     Please add me to your mailing list
                 </label>
             </div>
-            <div id="sixth-row">
+            <div id="sixth-row" class="row">
                 <label for="emailFormat">Choose an email format</label>
 
                 <label for="format">

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+#main {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.269);
+}
+
+#main h1 {
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+#first-row,
+#second-row {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+#third-row {
+  display: grid;
+
+  gap: 1rem;
+
+  grid-template-columns: 1.5fr 1.5fr;
+
+  > div:first-child {
+    grid-column: span 1.5;
+  }
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"] select {
+  height: 2.1rem;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.row {
+  margin: 1.2rem 0;
+}
+
+#sixth-row {
+  display: flex;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: rgb(33, 188, 33);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  #first-row,
+  #second-row,
+  #third-row {
+    display: flex;
+    flex-direction: column;
+  }
+}
