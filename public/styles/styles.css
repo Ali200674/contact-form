@@ -24,6 +24,7 @@ body {
 label {
   font-weight: bold;
   display: block;
+  margin-bottom: 0.2rem;
 }
 
 #first-row,
@@ -68,6 +69,12 @@ textarea {
 
 #sixth-row {
   display: flex;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
 textarea {
@@ -78,7 +85,7 @@ button {
   background-color: rgb(33, 188, 33);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 0.6rem 1rem;
   cursor: pointer;
 }
