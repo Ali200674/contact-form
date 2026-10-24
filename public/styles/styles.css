@@ -41,7 +41,7 @@ label {
 
   gap: 1rem;
 
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 3fr;
 
   > div:first-child {
     grid-column: span 1.5;
@@ -68,8 +68,7 @@ textarea {
 }
 
 #sixth-row {
-  display: flex;
-  align-items: center;
+  display: none;
 
   p {
     font-weight: bold;
@@ -97,4 +96,14 @@ button {
     display: flex;
     flex-direction: column;
   }
+}
+
+.err {
+  display: none;
+  color: red;
+  margin-top: 0.3rem;
+}
+
+#other-meet-option {
+  display: none;
 }

@@ -1,103 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="icon" href="/imgs/form.png">
-</head>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="icon" href="/imgs/form.png" />
+    <script src="/scripts/script.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <div id="main">
-        <div id="header">
-            <h1>Contact Form</h1>
+      <div id="header">
+        <h1>Contact Form</h1>
+      </div>
+      <form action="#" id="form" method="GET">
+        <div id="first-row" class="row">
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" />
+            <span class="err" id="fname-err">First Name Cannot Be Empty!</span>
+          </div>
+
+          <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" />
+            <span class="err" id="lname-err">Last Name Cannot Be Empty!</span>
+          </div>
+
+          <div>
+            <label for="jtitle">Job Title</label>
+            <input type="text" id="jtitle" />
+          </div>
         </div>
-        <form action="#" id="form" method="GET">
-            <div id="first-row" class="row">
-                <div>
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname">
-                </div>
+        <div id="second-row" class="row">
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" />
+          </div>
 
-                <div>
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname">
-                </div>
+          <div>
+            <label for="linkedinURL">Linkedin URL</label>
+            <input type="text" id="linkedinURL" />
+            <span class="err" id="linkedin-err"
+              >Link must start with "https://linkedin.com/in/"</span
+            >
+          </div>
 
-                <div>
-                    <label for="jtitle">Job Title</label>
-                    <input type="text" id="jtitle">
-                </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="text" id="email" />
+            <span class="err" id="email-err"></span>
+          </div>
+        </div>
+        <div id="third-row" class="row">
+          <div>
+            <label for="metOption">How did we meet?</label>
+            <select name="metOption" id="metOption">
+              <option value="none">Please select</option>
+              <option value="Linkedin">Linkedin</option>
+              <option value="Conference">Conference</option>
+              <option value="Referral">Referral</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="err" id="meetOption-err">Please choose an option</span>
+          </div>
 
+          <div id="other-meet-option">
+            <label for="otherMetOption">Other (please specify) </label>
+            <input type="text" id="otherMetOption" />
+          </div>
+        </div>
+        <div id="fourth-row" class="row">
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
 
-            </div>
-            <div id="second-row" class="row">
-                <div>
-                    <label for="company">Company</label>
-                    <input type="text" id="company">
-                </div>
+        <div id="fifth-row" class="row">
+          <label for="mailingList">
+            <input type="checkbox" id="mailingList" />
+            Please add me to your mailing list
+          </label>
+        </div>
+        <div id="sixth-row" class="row email-format">
+          <p>Choose an email format:</p>
 
-                <div>
-                    <label for="linkedinURL">Linkedin URL</label>
-                    <input type="url" id="linkedinURL">
-                </div>
+          <label for="HTML">
+            <input type="radio" name="format" id="HTML" value="HTML" />
+            HTML
+          </label>
 
-                <div>
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email">
-                </div>
-            </div>
-            <div id="third-row" class="row">
-                <div>
-                    <label for="metOption">How did we meet?</label>
-                    <select name="metOption" id="metOption">
-                        <option value="none">Please select</option>
-                        <option value="Linkedin">Linkedin</option>
-                        <option value="Conference">Conference</option>
-                        <option value="Referral">Referral</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+          <label for="Text">
+            <input type="radio" name="format" id="Text" value="Text" />
+            Text
+          </label>
+        </div>
 
-                <div>
-                    <label for="otherMetOption">Other (please specify) </label>
-                    <input type="text" id="otherMetOption">
-                </div>
-
-
-
-            </div>
-            <div id="fourth-row" class="row">
-                <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
-            </div>
-
-            <div id="fifth-row" class="row">
-                <label for="mailingList">
-                    <input type="checkbox" id="mailingList">
-                    Please add me to your mailing list
-                </label>
-            </div>
-            <div id="sixth-row" class="row">
-                <p>Choose an email format:</p>
-
-                <label for="HTML">
-                    <input type="radio" name="format" id="HTML" value="HTML">
-                    HTML
-                </label>
-
-
-                <label for="Text">
-                    <input type="radio" name="format" id="Text" value="Text">
-                    Text
-                </label>
-            </div>
-
-            <button type="submit" id="submit-button">Submit</button>
-        </form>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
