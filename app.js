@@ -10,6 +10,10 @@ const PORT = 3002;
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
+  res.sendFile(`${import.meta.dirname}/views/home.html`);
+});
+
+app.get("/contact-form", (req, res) => {
   res.sendFile(`${import.meta.dirname}/views/contactpage.html`);
 });
 
