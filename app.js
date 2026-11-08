@@ -14,12 +14,14 @@ app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 
+app.set('view engine', 'ejs')
+
 app.get("/", (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/home.html`);
+  res.render("home");
 });
 
 app.get("/contact-form", (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/contactpage.html`);
+  res.render("contactpage");
 });
 
 app.post("/confirm", (req, res) => {
@@ -28,10 +30,11 @@ app.post("/confirm", (req, res) => {
 
   console.log(req.body);
 
-  res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+  res.render("confirm");
 });
 
 app.get("/admin", (req, res) => {
+  res.render("admin", {list})
 })
 
 app.listen(PORT, () => {
