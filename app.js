@@ -31,6 +31,8 @@ app.post("/confirm", (req, res) => {
   res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 });
 
+app.get("/admin", (req, res) => {
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
