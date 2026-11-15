@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation</title>
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" href="/styles/confirm.css">
 </head>
 <body>
-    <h1 style = "text-align: center; font-family: sans-serif;">Thank you for your contact information!</h1>
-    <a href="/" style = "text-align: center; display: block;">Back To Form</a>
-    <footer style = "display: flex; justify-content: center; margin-top: 1rem;">
+    <h1>Thank you for your contact information!</h1>
+    <a href="/">Back To Form</a>
+    
+    <div id = "main">
+        <h2>Your Submission</h2>
+        <div id = "main-info">
+            <div class = "info">
+                <h3>Your Full Name:</h3>
+                <p><b></b> <%= contact.fname %> <%= contact.lname %> </p>
+            </div>
+            <div class = "info">
+                <h3>Your Job Title:</h3>
+                <p><%= contact.jtitle %></p>
+            </div>
+            <div class = "info">
+                <h3>Company Name:</h3>
+                <p><%= contact["company-name"] %></p>
+            </div>
+            <div class = "info">
+                <h3>Linkedin URL:</h3>
+                <p><%= contact.linkedinUrl %></p>
+            </div>
+            <div class = "info">
+                <h3>Email:</h3>
+                <p><%= contact.email %></p>
+            </div>
+
+            <div class = "info">
+                <h3>How did we meet:</h3>
+                <% if (contact["other-option"] !== '') { %>
+                <p><%= contact["other-option"] %></p>
+                <% } else { %>
+                <p><%= contact.metOption %></p>
+                <% } %>
+            </div>
+            <div class = "info">
+                <h3>Message:</h3>
+                <% if (contact.message !== "") { %>
+                    <p> <%= contact.message %></p>
+                <% } %>
+            </div>
+             <% if (contact.mailingList === "on") { %>
+            <div class = "info" id = "mailingList">
+                <div>
+                    <h3>Add to Mailing List: </h3>
+                    <p><%= contact.mailingList.toUpperCase(); %></p>
+                </div>
+                <div>
+                    <h3>Format</h3>
+                    <p><%= contact.format %></p>
+                </div>
+            </div>
+            <% } %> 
+            <div class = "info">
+                <h3>Time of Submission: </h3>
+                <p><%= contact.timestamp.toLocaleDateString() %></p>
+            </div>
+        </div>
+    </div>
+    <footer>
         <span>GitHub Link: <a href="https://github.com/Ali200674/contact-form">Here</a></span>
     </footer>
 </body>

@@ -26,11 +26,14 @@ app.get("/contact-form", (req, res) => {
 
 app.post("/confirm", (req, res) => {
 
+  const contact = req.body;
+  contact.timestamp = new Date();
+
   list.push(req.body);
 
   console.log(req.body);
 
-  res.render("confirm");
+  res.render("confirm", {contact});
 });
 
 app.get("/admin", (req, res) => {

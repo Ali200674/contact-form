@@ -1,0 +1,57 @@
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+h1 {
+    text-align: center;
+}
+
+a {
+    text-align: center; 
+    display: block;
+    margin-top: 1rem;
+}
+
+#main {
+    width: 700px;
+    margin: 0 auto;
+
+    background-color: white;
+
+    padding: 1rem;
+
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.269);
+    margin-top: 3rem;
+}
+
+#main-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.info {
+    margin: .5rem;
+}
+
+#mailingList {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+
+}
