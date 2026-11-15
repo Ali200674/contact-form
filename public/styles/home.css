@@ -21,11 +21,13 @@
     }
 }
 
-#main {
+#contact-info {
     margin-top: 3rem;
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     a {
         display: block;
         background-color: green;
