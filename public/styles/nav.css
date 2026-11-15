@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.nav-link {    
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color .2s ease;
+    outline: none;
+}
+
+.nav-link:hover {
+    background-color: rgb(105, 34, 171);
+    color: white;
+}
