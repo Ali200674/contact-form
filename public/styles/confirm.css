@@ -1,7 +1,10 @@
 
-
-body {
+* {
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+
     background-color: #f4f4f4;
 }
 h1 {
