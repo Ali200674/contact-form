@@ -22,10 +22,9 @@ const PORT = 3002;
 const list = [];
 
 // Enables static file serving
+// Middle ware
 app.use(express.static("public"));
-
 app.use(express.urlencoded({ extended: true }));
-
 app.set('view engine', 'ejs')
 
 app.get("/", (req, res) => {
@@ -35,6 +34,7 @@ app.get("/", (req, res) => {
 app.get("/contact-form", (req, res) => {
   res.render("contactpage");
 });
+
 
 app.post("/confirm", (req, res) => {
 
@@ -48,7 +48,8 @@ app.post("/confirm", (req, res) => {
   res.render("confirm", {contact});
 });
 
-app.get("/admin", (req, res) => {
+app.get("/admin", async (req, res) => {
+  const [list] = await pool.query("SELECT * FROM contacts");
   res.render("admin", {list})
 })
 
