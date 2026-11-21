@@ -18,9 +18,6 @@ const app = express();
 // Port num
 const PORT = 3002;
 
-// Array for values
-const list = [];
-
 // Enables static file serving
 // Middle ware
 app.use(express.static("public"));
@@ -36,14 +33,29 @@ app.get("/contact-form", (req, res) => {
 });
 
 
-app.post("/confirm", (req, res) => {
-
+app.post("/confirm", async (req, res) => {
   const contact = req.body;
+
+  const statement = `INSERT INTO contacts (first_name, last_name, job_title, company_name, linkedin_url, email, meet_option, meet_option_other, message, mailing_list, format) VALUES 
+                    (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+
+  const params = [
+    contact.fname,
+    contact.lname,
+    contact.jtitle,
+    contact["company-name"],
+    contact.linkedinUrl,
+    contact.email,
+    contact.metOption,
+    contact["other-option"],
+    contact.message,
+    contact.mailingList === undefined ? "off" : contact.mailingList,
+    contact.format === undefined ? "" : contact.format,
+  ]
+
   contact.timestamp = new Date();
 
-  list.push(req.body);
-
-  console.log(req.body);
+  const [result] = await pool.execute(statement, params)
 
   res.render("confirm", {contact});
 });
